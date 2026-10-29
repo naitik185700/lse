@@ -66,13 +66,14 @@ echo -e "\n[5/6] Setting up Nginx configuration..."
 CONF_PATH="/etc/nginx/sites-available/loansettlementexpert.conf"
 ENABLED_PATH="/etc/nginx/sites-enabled/loansettlementexpert.conf"
 
-if [ ! -f "/etc/letsencrypt/live/loansettlementexpert.in/fullchain.pem" ]; then
-    echo "Setting up temporary HTTP Nginx proxy to obtain SSL..."
-    cat > "$CONF_PATH" << 'EOF'
+# Always ensure a valid HTTP configuration is written first
+cat > "$CONF_PATH" << 'EOF'
 server {
     listen 80;
     listen [::]:80;
     server_name loansettlementexpert.in www.loansettlementexpert.in;
+
+    client_max_body_size 25M;
 
     location / {
         proxy_pass http://127.0.0.1:3005;
@@ -80,22 +81,39 @@ server {
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
         proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
         proxy_cache_bypass $http_upgrade;
+    }
+
+    location /_next/static {
+        proxy_pass http://127.0.0.1:3005;
+        proxy_cache_bypass $http_upgrade;
+        expires 365d;
+        access_log off;
     }
 }
 EOF
-    ln -sf "$CONF_PATH" "$ENABLED_PATH"
-    nginx -t && systemctl reload nginx
+ln -sf "$CONF_PATH" "$ENABLED_PATH"
+nginx -t && systemctl reload nginx
 
-    echo "Requesting Let's Encrypt SSL certificate..."
+# Check or obtain Let's Encrypt SSL
+if [ ! -f "/etc/letsencrypt/live/loansettlementexpert.in/fullchain.pem" ]; then
+    echo "Attempting to obtain Let's Encrypt SSL certificate..."
     certbot --nginx -d loansettlementexpert.in -d www.loansettlementexpert.in --non-interactive --agree-tos --register-unsafely-without-email || true
 fi
 
-# Deploy final SSL reverse proxy config
-cp -f "${APP_DIR}/deploy/nginx-loansettlementexpert.conf" "$CONF_PATH"
-ln -sf "$CONF_PATH" "$ENABLED_PATH"
-nginx -t && systemctl reload nginx
-echo "Nginx reverse proxy reloaded successfully."
+# Deploy final SSL reverse proxy config if certificate is present
+if [ -f "/etc/letsencrypt/live/loansettlementexpert.in/fullchain.pem" ]; then
+    cp -f "${APP_DIR}/deploy/nginx-loansettlementexpert.conf" "$CONF_PATH"
+    nginx -t && systemctl reload nginx
+    echo "✓ SSL enabled with Let's Encrypt."
+else
+    echo "Notice: Domain DNS may still be propagating or not yet pointed to this server."
+    echo "HTTP proxy is active on port 80. Once DNS is verified, obtain SSL anytime by running:"
+    echo "  certbot --nginx -d loansettlementexpert.in -d www.loansettlementexpert.in"
+fi
 
 # 8. Success Report
 echo -e "\n==================================================================="
