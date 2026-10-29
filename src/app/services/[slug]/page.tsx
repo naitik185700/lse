@@ -221,7 +221,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <ZohoForm
                 title={`Request ${service.title} Review`}
                 subtitle="Submit your details directly to our senior legal advisors for confidential case evaluation."
-                minHeight="620px"
               />
             </div>
 

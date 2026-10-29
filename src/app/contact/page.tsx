@@ -43,7 +43,6 @@ export default function ContactPage() {
             <ZohoForm
               title="Request a Confidential Callback"
               subtitle="Fill out the form below and our team will contact you shortly to discuss your situation."
-              minHeight="640px"
             />
           </div>
 

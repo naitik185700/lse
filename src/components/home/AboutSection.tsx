@@ -72,11 +72,10 @@ export default function AboutSection() {
           </div>
 
           {/* Right: Exact Official Zoho Form from Existing Web */}
-          <div className="lg:col-span-5 sticky top-28">
+          <div className="lg:col-span-5 w-full">
             <ZohoForm 
               title="Consult Our Experts Now"
               subtitle="Facing issues with loan repayments or recovery calls? Submit your details directly to our senior advisors."
-              minHeight="590px"
             />
           </div>
 
