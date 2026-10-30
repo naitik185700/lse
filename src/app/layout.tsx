@@ -55,6 +55,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: SITE_CONFIG.url,
+    types: {
+      "text/markdown": [
+        { url: `${SITE_CONFIG.url}/llms.txt`, title: "LLMs.txt" },
+      ],
+    },
   },
   openGraph: {
     type: "website",
@@ -95,6 +100,9 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <JsonLd type="organization" />
+        {/* AI & GEO Discovery: llms.txt */}
+        <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLMs.txt" />
+        <link rel="help" type="text/markdown" href="/llms.txt" title="AI Documentation & Discoverability Guide" />
       </head>
       <body className="min-h-screen flex flex-col bg-white text-[#263443] font-sans antialiased selection:bg-[#B69A6A]/20 selection:text-[#0B1B28]">
         {/* WCAG 2.4.1 Bypass Blocks: Skip to Main Content */}
