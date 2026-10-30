@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Loan Settlement Expert",
   },
   description:
-    "Loan Settlement Expert provides professional loan and debt settlement services in India. Stop bank harassment, reduce loan burden, and settle credit card & personal loans legally. Free consultation available.",
+    "Professional debt & loan settlement in India. Stop bank harassment, resolve dues legally, and become debt-free. Request a free case review today.",
   keywords: [
     "Loan Settlement Expert",
     "Loan Settlement",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     url: SITE_CONFIG.url,
     title: "Loan Settlement Expert | Settle Loans & Become Debt Free",
     description:
-      "Struggling with loan repayment? Our experts help you settle loans legally, reduce debt, and stop recovery harassment. Trusted loan settlement experts in India.",
+      "Settle bank debts and credit cards legally across India. Stop harassment and resolve dues with confidential advisory. Get a free consultation.",
     siteName: "Loan Settlement Expert",
     images: [
       {
@@ -85,7 +85,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <JsonLd type="all" />
+        <JsonLd type="organization" />
       </head>
       <body className="min-h-screen flex flex-col bg-white text-[#263443] font-sans antialiased selection:bg-[#B69A6A]/20 selection:text-[#0B1B28]">
         <Header />

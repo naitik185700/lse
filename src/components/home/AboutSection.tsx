@@ -36,7 +36,7 @@ export default function AboutSection() {
             <div className="pt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-slate-200">
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
                 <ShieldCheck className="w-6 h-6 text-[#B69A6A] mb-2" />
-                <h4 className="text-sm font-semibold text-[#142B3B]">Confidential & Ethical</h4>
+                <h3 className="text-sm font-semibold text-[#142B3B]">Confidential & Ethical</h3>
                 <p className="text-xs text-[#687482] mt-1">
                   Individual attention and strict non-disclosure for every case.
                 </p>
@@ -44,7 +44,7 @@ export default function AboutSection() {
 
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
                 <Scale className="w-6 h-6 text-[#B69A6A] mb-2" />
-                <h4 className="text-sm font-semibold text-[#142B3B]">Legal-First Approach</h4>
+                <h3 className="text-sm font-semibold text-[#142B3B]">Legal-First Approach</h3>
                 <p className="text-xs text-[#687482] mt-1">
                   Clear understanding of borrower rights under RBI recovery framework.
                 </p>
@@ -52,7 +52,7 @@ export default function AboutSection() {
 
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
                 <Award className="w-6 h-6 text-[#B69A6A] mb-2" />
-                <h4 className="text-sm font-semibold text-[#142B3B]">Documented Closure</h4>
+                <h3 className="text-sm font-semibold text-[#142B3B]">Documented Closure</h3>
                 <p className="text-xs text-[#687482] mt-1">
                   Full assistance until settlement letter and NOC are delivered.
                 </p>

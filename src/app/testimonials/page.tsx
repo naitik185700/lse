@@ -7,7 +7,7 @@ import ConsultationCta from "@/components/home/ConsultationCta";
 export const metadata: Metadata = {
   title: "Client Testimonials & Reviews | Loan Settlement Expert",
   description:
-    "Read genuine reviews and success stories from clients across India who resolved unmanageable debt, stopped recovery harassment, and settled loans legally with Loan Settlement Expert.",
+    "Real reviews from clients across India who resolved unmanageable debt, stopped recovery harassment, and achieved legal settlement with our team.",
   alternates: {
     canonical: `${SITE_CONFIG.url}/testimonials`,
   },
@@ -36,6 +36,7 @@ export default function TestimonialsPage() {
 
       {/* Testimonials Grid (All 29 Testimonials) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <h2 className="sr-only">Verified Client Reviews and Testimonials</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {ALL_TESTIMONIALS.map((t, idx) => (
             <div
@@ -59,7 +60,7 @@ export default function TestimonialsPage() {
 
               <div className="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between">
                 <div>
-                  <h4 className="text-sm font-bold text-[#142B3B]">{t.name}</h4>
+                  <h3 className="text-sm font-bold text-[#142B3B]">{t.name}</h3>
                   <div className="flex items-center gap-1 text-xs text-[#687482] mt-0.5">
                     <MapPin className="w-3 h-3 text-[#B69A6A]" />
                     <span>{t.location}</span>

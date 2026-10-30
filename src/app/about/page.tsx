@@ -8,7 +8,7 @@ import ConsultationCta from "@/components/home/ConsultationCta";
 export const metadata: Metadata = {
   title: "About Us | Loan Settlement Expert India",
   description:
-    "Learn about Loan Settlement Expert, our story, mission, and legal advisory commitment to helping borrowers resolve unmanageable debt lawfully and stop recovery harassment.",
+    "Learn about Loan Settlement Expert, our mission, legal advisory, and how we help borrowers resolve debt and stop recovery harassment across India.",
   alternates: {
     canonical: `${SITE_CONFIG.url}/about`,
   },

@@ -40,10 +40,9 @@ export default function TestimonialsSection() {
                 {/* Quote Icon & Stars */}
                 <div className="flex items-center justify-between mb-4">
                   <Quote className="w-7 h-7 text-[#B69A6A]/40" />
-                  <div className="flex items-center gap-0.5 text-amber-500">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                    ))}
+                  <div className="flex items-center gap-1 text-amber-600 font-semibold text-xs bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200/80">
+                    <Star className="w-3.5 h-3.5 fill-current text-amber-500" />
+                    <span>5.0 Rating</span>
                   </div>
                 </div>
 
@@ -56,7 +55,7 @@ export default function TestimonialsSection() {
               {/* Author Info */}
               <div className="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between">
                 <div>
-                  <h4 className="text-sm font-bold text-[#142B3B]">{t.name}</h4>
+                  <h3 className="text-sm font-bold text-[#142B3B]">{t.name}</h3>
                   <div className="flex items-center gap-1 text-[11px] text-[#687482] mt-0.5">
                     <MapPin className="w-3 h-3 text-[#B69A6A]" />
                     <span>{t.location}</span>

@@ -10,7 +10,7 @@ import ConsultationCta from "@/components/home/ConsultationCta";
 export const metadata: Metadata = {
   title: "Debt Resolution & Loan Settlement Services in India",
   description:
-    "Explore our complete range of legal loan settlement services across India, including personal loans, credit card debt, business loans, vehicle loans, and anti-harassment protection.",
+    "Legal loan settlement services across India: personal loans, credit card debt, business dues, vehicle loans, and anti-harassment protection.",
   alternates: {
     canonical: `${SITE_CONFIG.url}/services`,
   },
@@ -39,6 +39,7 @@ export default function ServicesPage() {
 
       {/* Services Grid (All 11 services) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <h2 className="sr-only">Specialized Debt Resolution & Settlement Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SERVICES.map((service) => {
             const introPara = service.sections?.[0]?.paragraphs?.[0] || "";

@@ -149,7 +149,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
             {/* In-article Consultation Trigger */}
             <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-[#F7F8FA] border border-slate-200">
-              <h3 className="text-xl font-bold text-[#142B3B] mb-2">Need Immediate Guidance On This Topic?</h3>
+              <h2 className="text-xl font-bold text-[#142B3B] mb-2">Need Immediate Guidance On This Topic?</h2>
               <p className="text-sm text-[#687482] mb-6">
                 Our senior legal advisors offer free, confidential evaluations for borrowers struggling with defaults or recovery pressure.
               </p>
@@ -163,7 +163,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             {/* Quick Call Box */}
             <div className="bg-[#0B1B28] text-white p-6 sm:p-7 rounded-2xl shadow-md space-y-4">
               <ShieldCheck className="w-8 h-8 text-[#B69A6A]" />
-              <h3 className="text-lg font-bold">Speak with a Legal Settlement Advisor</h3>
+              <h2 className="text-lg font-bold">Speak with a Legal Settlement Advisor</h2>
               <p className="text-xs text-slate-300 leading-relaxed">
                 Have questions regarding the legalities mentioned in this article? Call our direct helpline now.
               </p>
@@ -178,9 +178,9 @@ export default async function BlogPostPage({ params }: PageProps) {
 
             {/* Related Articles */}
             <div className="bg-[#F7F8FA] p-6 rounded-2xl border border-slate-200">
-              <h4 className="text-sm font-bold text-[#142B3B] uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">
+              <h3 className="text-sm font-bold text-[#142B3B] uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">
                 Recommended Reading
-              </h4>
+              </h3>
               <ul className="space-y-4">
                 {otherPosts.map((other) => (
                   <li key={other.slug} className="border-b border-slate-100 pb-3 last:border-b-0">

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { ChevronDown, Search, HelpCircle, PhoneCall, ArrowRight } from "lucide-react";
 import { ALL_FAQS, SITE_CONFIG } from "@/data/siteData";
 import ConsultationCta from "@/components/home/ConsultationCta";
+import JsonLd from "@/components/seo/JsonLd";
 
 export default function FaqPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -21,6 +22,7 @@ export default function FaqPage() {
 
   return (
     <div className="bg-white">
+      <JsonLd type="faq" />
       {/* Header Banner */}
       <section className="bg-gradient-to-r from-[#0B1B28] to-[#142B3B] text-white py-16 sm:py-20 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,6 +55,7 @@ export default function FaqPage() {
 
       {/* FAQs List (25 FAQs) */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <h2 className="sr-only">Answers to Common Loan Settlement Questions</h2>
         {filteredFaqs.length === 0 ? (
           <div className="text-center py-12 bg-slate-50 rounded-2xl border border-slate-200 p-8">
             <p className="text-base text-[#687482]">No matching questions found for &ldquo;{searchTerm}&rdquo;.</p>

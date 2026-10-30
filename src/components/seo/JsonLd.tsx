@@ -24,7 +24,7 @@ export default function JsonLd({ type = "all" }: { type?: "all" | "faq" | "organ
       longitude: "77.0266",
     },
     priceRange: "$$",
-    description: "Loan Settlement Expert provides professional loan and debt settlement services in India, including personal loans, credit card debt, and anti-harassment legal advisory.",
+    description: "Professional loan & debt settlement services in India, including personal loans, credit card debt, and anti-harassment legal advisory.",
     areaServed: "IN",
     openingHours: "Mo-Sa 09:30-18:30",
   };

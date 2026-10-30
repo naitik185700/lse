@@ -23,10 +23,10 @@ export default function JourneySection() {
             <span>Structured Process</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#142B3B] tracking-tight">
-            Your Loan Settlement Journey
+            Your Debt Resolution Journey
           </h2>
           <p className="mt-3 text-sm sm:text-base text-[#687482]">
-            A step-by-step lawful roadmap designed to relieve stress, handle lender harassment, and achieve a permanent written loan closure.
+            A step-by-step roadmap to reduce financial stress, stop collection pressure, and achieve written bank closure.
           </p>
         </div>
 
