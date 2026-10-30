@@ -103,16 +103,15 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group focus:outline-none" aria-label="Loan Settlement Expert Home">
-            <div className="relative w-44 sm:w-56 h-12 sm:h-14">
-              <Image
-                src="/images/lsa-logo.webp"
-                alt="Loan Settlement Expert"
-                fill
-                priority
-                sizes="(max-width: 640px) 176px, 224px"
-                className="object-contain object-left"
-              />
-            </div>
+            <Image
+              src="/images/lsa-logo.webp"
+              alt="Loan Settlement Expert"
+              width={224}
+              height={56}
+              priority
+              fetchPriority="high"
+              className="h-10 sm:h-12 w-auto object-contain object-left"
+            />
           </Link>
 
           {/* Desktop Navigation Links */}

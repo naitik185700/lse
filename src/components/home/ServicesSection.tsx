@@ -54,27 +54,16 @@ export default function ServicesSection() {
                   <p className="mt-2 text-xs sm:text-sm text-[#687482] line-clamp-3 leading-relaxed">
                     {service.summary}
                   </p>
-
-                  {service.bullets.length > 0 && (
-                    <ul className="mt-4 space-y-1.5 border-t border-slate-100 pt-3">
-                      {service.bullets.map((b, i) => (
-                        <li key={i} className="flex items-start gap-2 text-xs text-[#263443]">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[#B69A6A] flex-shrink-0 mt-0.5" />
-                          <span className="truncate">{b}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
                 </div>
 
                 {/* Card Action Link */}
                 <div className="mt-6 pt-4 border-t border-slate-100">
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#142B3B] group-hover:text-[#B69A6A] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#142B3B] group-hover:text-[#B69A6A] transition-colors"
                   >
                     <span>View Details</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    <span className="group-hover:translate-x-1 transition-transform inline-block text-sm leading-none font-sans">→</span>
                   </Link>
                 </div>
               </div>

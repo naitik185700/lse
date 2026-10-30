@@ -18,6 +18,11 @@ import { HERO_SLIDES, SITE_CONFIG } from "@/data/siteData";
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (isPaused) return;
@@ -43,23 +48,27 @@ export default function HeroSlider() {
       aria-label="Hero Section"
     >
       {/* Dynamic Background Image Layers with Smooth Transitions */}
-      {HERO_SLIDES.map((slide, idx) => (
-        <div
-          key={idx}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            currentSlide === idx ? "opacity-100 z-0" : "opacity-0 -z-10"
-          }`}
-        >
-          <Image
-            src={slide.image}
-            alt={slide.title}
-            fill
-            priority={idx === 0}
-            sizes="100vw"
-            className="object-cover object-center lg:object-right scale-105 transition-transform duration-7000 ease-out"
-          />
-        </div>
-      ))}
+      {HERO_SLIDES.map((slide, idx) => {
+        if (!mounted && idx !== 0) return null;
+        return (
+          <div
+            key={idx}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              currentSlide === idx ? "opacity-100 z-0" : "opacity-0 -z-10"
+            }`}
+          >
+            <Image
+              src={slide.image}
+              alt={slide.title}
+              fill
+              priority={idx === 0}
+              fetchPriority={idx === 0 ? "high" : "auto"}
+              sizes="100vw"
+              className="object-cover object-center lg:object-right scale-105 transition-transform duration-7000 ease-out"
+            />
+          </div>
+        );
+      })}
 
       {/* Layered Gradient Overlays for High Legibility & Professional Feel */}
       {/* 1. Deep Navy to Translucent Gradient (Text readability on left) */}

@@ -3,7 +3,6 @@ import HeroSlider from "@/components/home/HeroSlider";
 import AboutSection from "@/components/home/AboutSection";
 import LoanCalculator from "@/components/calculator/LoanCalculator";
 import ServicesSection from "@/components/home/ServicesSection";
-import BorrowerRightsSection from "@/components/home/BorrowerRightsSection";
 import SettlementGuideSection from "@/components/home/SettlementGuideSection";
 import JourneySection from "@/components/home/JourneySection";
 import StatsSection from "@/components/home/StatsSection";
@@ -26,13 +25,10 @@ export default function HomePage() {
       {/* 4. Debt Resolution Services */}
       <ServicesSection />
 
-      {/* 5. RBI Fair Practices & Borrower Rights */}
-      <BorrowerRightsSection />
-
-      {/* 6. Comprehensive Settlement Guide */}
+      {/* 5. Comprehensive Debt Resolution Guide */}
       <SettlementGuideSection />
 
-      {/* 7. Loan Settlement Journey */}
+      {/* 6. Loan Settlement Journey */}
       <JourneySection />
 
       {/* 7. Existing Business Statistics */}
@@ -42,7 +38,7 @@ export default function HomePage() {
       <TestimonialsSection />
 
       {/* 9. Frequently Asked Questions */}
-      <FaqSection maxItems={15} />
+      <FaqSection maxItems={6} />
 
       {/* 10. Contact or Consultation CTA */}
       <ConsultationCta />

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ChevronDown, HelpCircle, ArrowRight } from "lucide-react";
 import { ALL_FAQS } from "@/data/siteData";
 
-export default function FaqSection({ maxItems = 8 }: { maxItems?: number }) {
+export default function FaqSection({ maxItems = 6 }: { maxItems?: number }) {
   const displayFaqs = maxItems ? ALL_FAQS.slice(0, maxItems) : ALL_FAQS;
 
   return (
