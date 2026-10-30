@@ -60,11 +60,12 @@ export default function HeroSlider() {
             <Image
               src={slide.image}
               alt={slide.title}
-              fill
+              width={1920}
+              height={1080}
               priority={idx === 0}
               fetchPriority={idx === 0 ? "high" : "auto"}
               sizes="100vw"
-              className="object-cover object-center lg:object-right scale-105 transition-transform duration-7000 ease-out"
+              className="w-full h-full object-cover object-center lg:object-right scale-105 transition-transform duration-7000 ease-out"
             />
           </div>
         );

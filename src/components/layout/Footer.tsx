@@ -13,13 +13,13 @@ export default function Footer() {
           {/* Column 1: Brand & About (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="inline-block focus:outline-none">
-              <div className="relative w-56 h-14 bg-white/5 p-1 rounded">
+              <div className="bg-white/5 p-1 rounded inline-block">
                 <Image
                   src="/images/lsa-logo.webp"
                   alt="Loan Settlement Expert"
-                  fill
-                  sizes="224px"
-                  className="object-contain object-left"
+                  width={224}
+                  height={56}
+                  className="h-10 sm:h-12 w-auto object-contain object-left"
                 />
               </div>
             </Link>

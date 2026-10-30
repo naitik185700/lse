@@ -45,25 +45,25 @@ export const HERO_SLIDES: HeroSlide[] = [
     title: "From Constant Worry to Complete Relief",
     subtitle: "Loan Settlement Expert Stands With You.",
     cta: "Contact Us",
-    image: "/images/hero/hero_3_bg.png"
+    image: "/images/hero/loan-settlement-expert-legal-consultation.png"
   },
   {
     title: "Life Feels Better When Loans Stop Controlling Your Home",
     subtitle: "Loan Settlement Expert Stands With You.",
     cta: "Contact Us",
-    image: "/images/hero/hero_3_bg3.png"
+    image: "/images/hero/bank-recovery-harassment-legal-relief.png"
   },
   {
     title: "A Secure Family Life Begins with the Right Financial Support",
     subtitle: "Loan Settlement Expert Stands With You.",
     cta: "Contact Us",
-    image: "/images/hero/hero_3_bg4.png"
+    image: "/images/hero/rbi-guidelines-debt-settlement-advisory.png"
   },
   {
     title: "From Harassment Calls to Peaceful Nights",
     subtitle: "Loan Settlement Expert Stands With You.",
     cta: "Contact Us",
-    image: "/images/hero/hero_3_bg5.png"
+    image: "/images/hero/financial-freedom-debt-resolution-india.png"
   }
 ];
 

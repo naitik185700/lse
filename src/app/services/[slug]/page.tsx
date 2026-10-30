@@ -135,10 +135,11 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 <Image
                   src={service.image}
                   alt={service.title}
-                  fill
+                  width={600}
+                  height={400}
                   priority
                   sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover"
+                  className="w-full h-64 sm:h-80 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
               </div>
