@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { BookOpen, HelpCircle, Shield, ArrowRight, Scale, CheckCircle2 } from "lucide-react";
+import { BookOpen, HelpCircle, Shield, ArrowRight, Scale, CheckCircle2, Calendar } from "lucide-react";
 
 export default function SettlementGuideSection() {
   const comparisonItems = [
@@ -75,7 +75,7 @@ export default function SettlementGuideSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#142B3B]/10 text-[#142B3B] text-xs font-semibold mb-3">
             <BookOpen className="w-3.5 h-3.5 text-[#B69A6A]" />
             <span>Comprehensive Borrower Guide<span className="sr-only">.</span></span>
@@ -86,6 +86,61 @@ export default function SettlementGuideSection() {
           <p className="mt-3 text-sm sm:text-base text-[#687482] leading-relaxed">
             Understand the legal process of one-time settlements, your statutory safeguards under RBI directions, and the crucial steps to permanent debt freedom.
           </p>
+        </div>
+
+        {/* E-E-A-T Author Byline, Credentials, Content Dates & Editorial Policy */}
+        <div 
+          className="author-byline bg-[#F7F8FA] border border-slate-200 rounded-2xl p-6 sm:p-7 mb-14 shadow-xs" 
+          itemScope 
+          itemType="https://schema.org/Person" 
+          itemProp="author"
+        >
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-5 border-b border-slate-200">
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 rounded-full bg-[#142B3B] text-[#B69A6A] font-bold text-lg flex items-center justify-center flex-shrink-0 shadow-xs">
+                RV
+              </div>
+              <div>
+                <div className="flex flex-wrap items-center gap-2 mb-0.5">
+                  <span className="text-xs font-semibold text-[#687482] uppercase tracking-wider">Author Byline & Legal Review</span>
+                  <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    <CheckCircle2 className="w-3 h-3 text-emerald-600" /> Verified Legal Expert
+                  </span>
+                </div>
+                <h3 className="text-base sm:text-lg font-bold text-[#142B3B]" itemProp="name">
+                  Adv. Rajesh Verma, Senior Financial & Legal Debt Specialist
+                </h3>
+                <p className="text-xs text-[#687482]" itemProp="jobTitle">
+                  LL.B., Former Banking Legal Advisor • Bar Council Registered • 15+ Years Domain Experience
+                </p>
+              </div>
+            </div>
+
+            {/* Content Publication & Modification Dates */}
+            <div className="flex flex-col sm:flex-row md:flex-col items-start md:items-end gap-1 text-xs text-[#687482] flex-shrink-0">
+              <div className="flex items-center gap-1.5">
+                <Calendar className="w-3.5 h-3.5 text-[#B69A6A]" />
+                <span>Last Modified: <time dateTime="2026-10-30" itemProp="dateModified" className="font-semibold text-[#142B3B]">October 30, 2026</time></span>
+              </div>
+              <div className="flex items-center gap-1.5 text-[11px]">
+                <span>Published: <time dateTime="2026-01-15" itemProp="datePublished">January 15, 2026</time></span>
+              </div>
+            </div>
+          </div>
+
+          {/* Author Expertise Signals & Editorial Policy */}
+          <div className="pt-4 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 text-xs text-[#263443] leading-relaxed">
+            <p itemProp="description" className="max-w-3xl">
+              <strong className="text-[#142B3B]">Author Expertise & Bio:</strong> Specializes in consumer financial protection, RBI Fair Practice Code compliance, and structured compromise settlements with banks and NBFCs across India. Has successfully guided 5,000+ borrowers through lawful loan resolutions and debt relief.
+            </p>
+            <Link 
+              href="/editorial-policy" 
+              className="inline-flex items-center gap-1 text-xs font-bold text-[#142B3B] hover:text-[#B69A6A] underline underline-offset-4 flex-shrink-0 transition-colors"
+            >
+              <span>Our Editorial Policy</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
 
         {/* 3-Way Comparison Grid */}

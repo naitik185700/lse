@@ -74,6 +74,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/editorial-policy" className="hover:text-[#B69A6A] transition-colors inline-flex items-center gap-1.5">
+                  <span className="text-[#B69A6A] text-xs">›</span> Editorial Policy
+                </Link>
+              </li>
+              <li>
                 <Link href="/terms-and-conditions" className="hover:text-[#B69A6A] transition-colors inline-flex items-center gap-1.5">
                   <span className="text-[#B69A6A] text-xs">›</span> Terms and Conditions
                 </Link>
@@ -206,6 +211,19 @@ export default function Footer() {
           <p>
             © {SITE_CONFIG.copyrightYear} {SITE_CONFIG.name}. All rights reserved.
           </p>
+          <div className="flex flex-wrap items-center gap-3 text-slate-400">
+            <Link href="/editorial-policy" className="hover:text-[#B69A6A] transition-colors">
+              Editorial Policy
+            </Link>
+            <span>•</span>
+            <Link href="/privacy-policy" className="hover:text-[#B69A6A] transition-colors">
+              Privacy Policy
+            </Link>
+            <span>•</span>
+            <Link href="/terms-and-conditions" className="hover:text-[#B69A6A] transition-colors">
+              Terms & Conditions
+            </Link>
+          </div>
           <p className="flex items-center gap-1">
             <span>Design By</span>
             <a

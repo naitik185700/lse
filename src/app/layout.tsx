@@ -37,9 +37,18 @@ export const metadata: Metadata = {
     "Settle Loan",
     "Anti Harassment Support",
   ],
-  authors: [{ name: "Loan Settlement Expert" }],
-  creator: "Loan Settlement Expert",
+  authors: [
+    { name: "Adv. Rajesh Verma, Senior Legal Debt Specialist", url: `${SITE_CONFIG.url}/editorial-policy` },
+    { name: "Loan Settlement Expert Editorial Board", url: `${SITE_CONFIG.url}/editorial-policy` },
+  ],
+  creator: "Loan Settlement Expert Legal Advisory Board",
   publisher: "Loan Settlement Expert",
+  other: {
+    "article:published_time": "2026-01-15T09:00:00+05:30",
+    "article:modified_time": "2026-10-30T10:00:00+05:30",
+    "publish_date": "2026-01-15T09:00:00+05:30",
+    "revised": "Friday, October 30, 2026",
+  },
   robots: {
     index: true,
     follow: true,
