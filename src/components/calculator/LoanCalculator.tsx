@@ -71,6 +71,7 @@ export default function LoanCalculator() {
                 <button
                   type="button"
                   onClick={handleReset}
+                  aria-label="Reset calculator inputs to default values"
                   className="inline-flex items-center gap-1.5 text-xs text-[#687482] hover:text-[#142B3B] font-medium"
                 >
                   <RefreshCw className="w-3.5 h-3.5" />
@@ -83,7 +84,7 @@ export default function LoanCalculator() {
                 {/* 1. Credit Card Debt */}
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <label htmlFor="ccDebt" className="text-sm font-medium text-[#263443]">
+                    <label id="ccDebt-label" htmlFor="ccDebt" className="text-sm font-medium text-[#263443]">
                       Your Credit Card Debt
                     </label>
                     <span className="text-sm font-bold text-[#142B3B] bg-slate-100 px-3 py-1 rounded-md">
@@ -97,6 +98,12 @@ export default function LoanCalculator() {
                     max="1000000"
                     step="5000"
                     value={ccDebt}
+                    aria-label="Your Credit Card Debt in Rupees"
+                    aria-labelledby="ccDebt-label"
+                    aria-valuemin={0}
+                    aria-valuemax={1000000}
+                    aria-valuenow={ccDebt}
+                    aria-valuetext={`₹${ccDebt.toLocaleString('en-IN')}`}
                     onChange={(e) => setCcDebt(Number(e.target.value))}
                     className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#142B3B]"
                   />
@@ -110,7 +117,7 @@ export default function LoanCalculator() {
                 {/* 2. Personal Loan Debt */}
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <label htmlFor="plDebt" className="text-sm font-medium text-[#263443]">
+                    <label id="plDebt-label" htmlFor="plDebt" className="text-sm font-medium text-[#263443]">
                       Your Personal Loan Debt
                     </label>
                     <span className="text-sm font-bold text-[#142B3B] bg-slate-100 px-3 py-1 rounded-md">
@@ -124,6 +131,12 @@ export default function LoanCalculator() {
                     max="1500000"
                     step="5000"
                     value={plDebt}
+                    aria-label="Your Personal Loan Debt in Rupees"
+                    aria-labelledby="plDebt-label"
+                    aria-valuemin={0}
+                    aria-valuemax={1500000}
+                    aria-valuenow={plDebt}
+                    aria-valuetext={`₹${plDebt.toLocaleString('en-IN')}`}
                     onChange={(e) => setPlDebt(Number(e.target.value))}
                     className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#142B3B]"
                   />
@@ -137,7 +150,7 @@ export default function LoanCalculator() {
                 {/* 3. Tenure */}
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <label htmlFor="tenure" className="text-sm font-medium text-[#263443]">
+                    <label id="tenure-label" htmlFor="tenure" className="text-sm font-medium text-[#263443]">
                       Preferred Settlement Tenure
                     </label>
                     <span className="text-sm font-bold text-[#142B3B] bg-slate-100 px-3 py-1 rounded-md">
@@ -151,6 +164,12 @@ export default function LoanCalculator() {
                     max="36"
                     step="1"
                     value={tenure}
+                    aria-label="Preferred Settlement Tenure in Months"
+                    aria-labelledby="tenure-label"
+                    aria-valuemin={6}
+                    aria-valuemax={36}
+                    aria-valuenow={tenure}
+                    aria-valuetext={`${tenure} Months`}
                     onChange={(e) => setTenure(Number(e.target.value))}
                     className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#B69A6A]"
                   />
@@ -168,6 +187,7 @@ export default function LoanCalculator() {
                   </label>
                   <div className="grid grid-cols-2 gap-3">
                     <label 
+                      htmlFor="missedEmi-yes"
                       className={`flex items-center justify-center p-3 rounded-lg border text-sm font-medium cursor-pointer transition-all ${
                         missedEmi === "yes" 
                           ? "border-[#142B3B] bg-[#142B3B] text-white shadow-sm" 
@@ -175,9 +195,11 @@ export default function LoanCalculator() {
                       }`}
                     >
                       <input
+                        id="missedEmi-yes"
                         type="radio"
                         name="missedEmi"
                         value="yes"
+                        aria-label="Yes, Facing Default - Missed EMI in last 3 months"
                         checked={missedEmi === "yes"}
                         onChange={() => setMissedEmi("yes")}
                         className="sr-only"
@@ -186,6 +208,7 @@ export default function LoanCalculator() {
                     </label>
 
                     <label 
+                      htmlFor="missedEmi-no"
                       className={`flex items-center justify-center p-3 rounded-lg border text-sm font-medium cursor-pointer transition-all ${
                         missedEmi === "no" 
                           ? "border-[#142B3B] bg-[#142B3B] text-white shadow-sm" 
@@ -193,9 +216,11 @@ export default function LoanCalculator() {
                       }`}
                     >
                       <input
+                        id="missedEmi-no"
                         type="radio"
                         name="missedEmi"
                         value="no"
+                        aria-label="No, But Stressed - Not missed EMI in last 3 months"
                         checked={missedEmi === "no"}
                         onChange={() => setMissedEmi("no")}
                         className="sr-only"

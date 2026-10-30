@@ -101,7 +101,7 @@ export default function SettlementGuideSection() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <h4 className="text-lg font-bold text-[#142B3B]">{item.title}<span className="sr-only">.</span></h4>
+                    <p className="text-lg font-bold text-[#142B3B]">{item.title}<span className="sr-only">.</span></p>
                     <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-white border border-slate-200 text-[#142B3B]">
                       {item.status}<span className="sr-only">.</span>
                     </span>
@@ -133,9 +133,9 @@ export default function SettlementGuideSection() {
                   <span className="text-xs font-bold text-[#B69A6A] tracking-wider block mb-2">
                     DOCUMENT {doc.step}<span className="sr-only">.</span>
                   </span>
-                  <h4 className="text-sm font-bold text-[#142B3B] mb-2 leading-snug">
+                  <p className="text-sm font-bold text-[#142B3B] mb-2 leading-snug">
                     {doc.name}<span className="sr-only">.</span>
-                  </h4>
+                  </p>
                   <p className="text-xs text-[#687482] leading-relaxed">
                     {doc.detail}
                   </p>
@@ -171,9 +171,9 @@ export default function SettlementGuideSection() {
                     <CheckCircle2 className="w-4 h-4" />
                     <span className="text-xs font-semibold uppercase tracking-wider">Statutory Right<span className="sr-only">.</span></span>
                   </div>
-                  <h4 className="text-base sm:text-lg font-bold text-[#142B3B] mb-1">
+                  <p className="text-base sm:text-lg font-bold text-[#142B3B] mb-1">
                     {insight.title}<span className="sr-only">.</span>
-                  </h4>
+                  </p>
                   <p className="text-xs font-medium text-[#B69A6A] mb-3">
                     {insight.summary}
                   </p>

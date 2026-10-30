@@ -73,21 +73,21 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-xl border border-slate-200 text-center">
               <ShieldCheck className="w-8 h-8 text-[#B69A6A] mx-auto mb-3" />
-              <h4 className="text-base font-semibold text-[#142B3B]">Strict Compliance</h4>
+              <p className="text-base font-semibold text-[#142B3B]">Strict Compliance</p>
               <p className="text-xs text-[#687482] mt-2">
                 Every settlement proposal strictly aligns with RBI fair recovery codes and lawful procedures.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl border border-slate-200 text-center">
               <Users className="w-8 h-8 text-[#B69A6A] mx-auto mb-3" />
-              <h4 className="text-base font-semibold text-[#142B3B]">Client Dignity First</h4>
+              <p className="text-base font-semibold text-[#142B3B]">Client Dignity First</p>
               <p className="text-xs text-[#687482] mt-2">
                 We handle every borrower with empathy, absolute confidentiality, and complete non-judgment.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl border border-slate-200 text-center">
               <Award className="w-8 h-8 text-[#B69A6A] mx-auto mb-3" />
-              <h4 className="text-base font-semibold text-[#142B3B]">Documented Closure</h4>
+              <p className="text-base font-semibold text-[#142B3B]">Documented Closure</p>
               <p className="text-xs text-[#687482] mt-2">
                 No false promises. We ensure genuine settlement letters and bank NOCs are delivered.
               </p>

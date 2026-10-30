@@ -250,9 +250,9 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
             {/* Other Services Navigation List */}
             <div className="bg-[#F7F8FA] p-6 rounded-2xl border border-slate-200">
-              <h4 className="text-sm font-bold text-[#142B3B] uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">
+              <h3 className="text-sm font-bold text-[#142B3B] uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">
                 Other Settlement Options
-              </h4>
+              </h3>
               <ul className="space-y-2">
                 {otherServices.map((other) => (
                   <li key={other.slug}>

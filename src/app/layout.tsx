@@ -88,8 +88,17 @@ export default function RootLayout({
         <JsonLd type="organization" />
       </head>
       <body className="min-h-screen flex flex-col bg-white text-[#263443] font-sans antialiased selection:bg-[#B69A6A]/20 selection:text-[#0B1B28]">
+        {/* WCAG 2.4.1 Bypass Blocks: Skip to Main Content */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2.5 focus:bg-[#142B3B] focus:text-white focus:rounded-md focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#B69A6A] font-semibold text-sm"
+        >
+          Skip to main content
+        </a>
         <Header />
-        <main className="flex-1 w-full">{children}</main>
+        <main id="main-content" tabIndex={-1} className="flex-1 w-full focus:outline-none">
+          {children}
+        </main>
         <Footer />
         <FloatingActions />
       </body>
